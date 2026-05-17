@@ -22,7 +22,7 @@ COPY --from=builder /opt/keycloak/lib/quarkus/ /opt/keycloak/lib/quarkus/
 COPY --from=ubi-micro-build /mnt/rootfs /
 
 # <-- place ton export ici côté hôte: keycloak/import/realm-export.json -->
-COPY keycloak/import/realm-export.json /opt/keycloak/data/import/realm-export.json
+COPY realm-export.json /opt/keycloak/data/import/realm-export.json
 # (optionnel) bake aussi le thème si tu ne veux pas de volume:
 # COPY themes/bzhcamp/ /opt/keycloak/themes/bzhcamp/
 
